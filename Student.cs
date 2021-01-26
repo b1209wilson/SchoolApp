@@ -61,7 +61,7 @@ namespace SchoolApp
         public override string ToString()
         {
             return "Name :" + studentFirstName + " " + studentLastName +
-                " \nMajor : " + major + " \nScore Average : " + CalculateAverage().ToString("*F2");
+                " \nMajor : " + major + " \nScore Average : " + CalculateAverage().ToString("F2");
         }
 
 

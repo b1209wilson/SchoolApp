@@ -13,6 +13,7 @@ namespace SchoolApp
 
             // Get student info First Student
 
+            
             FirstStudent.StudentNum = AskForStudentNumber();
 
             FirstStudent.StudentFirstName = AskForStudentName("First");
@@ -31,11 +32,44 @@ namespace SchoolApp
             Console.WriteLine("First Student");
             Console.WriteLine(FirstStudent.ToString());
 
-            Console.WriteLine("Enter any key to stop program");
+            Console.WriteLine("Press enter  for next student");
             Console.ReadKey();
 
+            //Create second student
 
+            Console.WriteLine(" \nSecond Student Info\n");
 
+            Student SecondStudent = new Student("2345", "Smith", "Maria");
+
+            SecondStudent.Major = AskForMajor(SecondStudent.StudentFirstName);
+
+            SecondStudent.Score1 = AskForExamScore(1);
+
+            SecondStudent.Score2 = AskForExamScore(2);
+
+            SecondStudent.Score3 = AskForExamScore(3);
+
+            Console.Clear();
+            Console.WriteLine("Second Student");
+            Console.WriteLine(SecondStudent.ToString());
+
+            Console.WriteLine("Press enter  for next student");
+            Console.ReadKey();
+
+            Console.WriteLine(" Geting data from database");
+
+            Student ThirdStudent = new Student("23457", "Smith", "Mr.", "Computer Science", 95, 78, 92);
+
+            Console.WriteLine("Third Student");
+            Console.WriteLine(ThirdStudent.ToString());
+
+            Console.WriteLine("Enter any key to stop program");
+            Console.ReadKey();
+        }
+
+        private static void GetstudentInfo()
+        {
+            throw new NotImplementedException();
         }
 
         private static int AskForExamScore(int whichOne)

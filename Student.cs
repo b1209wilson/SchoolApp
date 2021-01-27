@@ -10,6 +10,7 @@ namespace SchoolApp
 
         private string studentNum, studentLastName, studentFirstName, major;
         private int score1, score2, score3;
+        
 
         // Constructors
 
@@ -38,9 +39,20 @@ namespace SchoolApp
 
         }
 
+        public Student(string sId, string lastname, string firstName, string major, int Score1, int Score2, int Score3)
+        {
+            this.studentNum = sId;
+            this.studentLastName = lastname;
+            this.studentFirstName = firstName;
+            this.Major = major;
+            this.score1 = Score1;
+            this.score2 = Score2;
+            this.score3 = Score3;
+        }
+
         // Properties
 
-       
+
         public string StudentNum { get => studentNum; set => studentNum = value; }
         public string StudentLastName { get => studentLastName; set => studentLastName = value; }
         public string StudentFirstName { get => studentFirstName; set => studentFirstName = value; }
